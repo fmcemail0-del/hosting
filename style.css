@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR Master AI | المحلل الملكي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-robot AI-icon"></i>
+                <h1>CR MASTER <span class="gold">AI</span></h1>
+            </div>
+            <p class="subtitle">نظام الذكاء الاصطناعي لتحليل الميتا وبناء التشكيلات</p>
+        </header>
+
+        <section class="config-panel">
+            <div class="input-group">
+                <label><i class="fas fa-khanda"></i> اختر أسلوب لعبك:</label>
+                <select id="mainCard">
+                    <option value="hog-rider">Hog Rider - هوج رايدر</option>
+                    <option value="pekka">P.E.K.K.A - بيكا</option>
+                    <option value="mega-knight">Mega Knight - ميجا نايت</option>
+                    <option value="golem">Golem - غولم</option>
+                    <option value="goblin-barrel">Goblin Barrel - لوج بيت</option>
+                </select>
+            </div>
+            <button id="generateBtn">توليد التشكيلة الاحترافية ✨</button>
+        </section>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>جاري سحب البيانات من السيرفر...</p>
+        </div>
+
+        <section id="resultArea" class="hidden">
+            <div class="deck-header">
+                <h2><i class="fas fa-th-large"></i> التشكيلة المقترحة</h2>
+                <div class="avg-elixir-badge">إكسير: <span id="avgElixir">0.0</span></div>
+            </div>
+            
+            <div class="deck-grid" id="deckGrid"></div>
+            
+            <div class="strategy-section">
+                <div class="strategy-box">
+                    <h3><i class="fas fa-chess-knight"></i> خطة الهجوم (Offense)</h3>
+                    <p id="offenseText"></p>
+                </div>
+                <div class="strategy-box">
+                    <h3><i class="fas fa-shield-alt"></i> خطة الدفاع (Defense)</h3>
+                    <p id="defenseText"></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
